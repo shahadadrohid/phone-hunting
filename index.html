@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html data-theme="light" lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -17,12 +17,29 @@
 
     </header>
 
-    <main>
+    <main class="container mx-auto mt-8">
 
+        <section class="mb-8 bg-blue-200 p-4 m-4 rounded-xl">
+            <div>
+                <input id="search-field" type="text" name="" id="" placeholder="Search Phones" class="input input-bordered w-full max-w-xs">
+                <button onclick="handleSearch()" class="btn bg-blue-500 text-white border-0">Search</button>
+            </div>
+        </section>
+
+        <section>
+            <div id="phones-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+            </div>
+
+            <!-- Show all button -->
+            <div id="show-all-container" class="hidden">
+                <button class="btn bg-blue-500 text-white text-lg">Show All</button>
+            </div>
+        </section>
     </main>
 
     <footer>
-        
+
     </footer>
 
     <script src="js/phone.js"></script>

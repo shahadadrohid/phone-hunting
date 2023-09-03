@@ -21,21 +21,45 @@
 
         <section class="mb-8 bg-blue-200 p-4 m-4 rounded-xl">
             <div>
-                <input id="search-field" type="text" name="" id="" placeholder="Search Phones" class="input input-bordered w-full max-w-xs">
+                <input id="search-field" type="text" name="" id="" placeholder="Search Phones"
+                    class="input input-bordered w-full max-w-xs">
                 <button onclick="handleSearch()" class="btn bg-blue-500 text-white border-0">Search</button>
             </div>
         </section>
 
+
         <section>
+            <div id="loading" class="text-center my-36 hidden">
+                <!-- Spinner -->
+                <span class="loading loading-spinner text-info"></span>
+            </div>
+
             <div id="phones-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                
+
             </div>
 
             <!-- Show all button -->
-            <div id="show-all-container" class="hidden">
-                <button class="btn bg-blue-500 text-white text-lg">Show All</button>
+            <div id="show-all-container" class="hidden text-center mt-5">
+                <button onclick="showAll()" class="btn bg-blue-500 text-white text-lg">Show All</button>
             </div>
         </section>
+
+        <!-- Show details Modal -->
+        <!-- Open the modal using ID.showModal() method -->
+
+        <!-- <button class="btn" onclick="show_details_modal.showModal()">open modal</button> -->
+        <dialog id="show_details_modal" class="modal modal-bottom sm:modal-middle">
+            <form method="dialog" class="modal-box text-center">
+                <div id="show-details-container" class=" flex flex-col items-center">
+
+                </div>
+                <div class="modal-action">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn">Close</button>
+                </div>
+            </form>
+        </dialog>
+
     </main>
 
     <footer>
